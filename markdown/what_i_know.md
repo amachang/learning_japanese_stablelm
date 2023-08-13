@@ -9,8 +9,8 @@
   - sentencepiece
   - cuda
 - バージョンとか。一旦以下のような環境を作ってみる
-  - cuda 11.8 or 11.7
-    - GCP のインスタンスのドライバとか見て決める
+  - nvidia driver 535
+  - cuda 11.8
   - python 3.10
   - torch 2.0.1
     - python 3.8 ~

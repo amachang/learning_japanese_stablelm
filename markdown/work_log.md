@@ -12,4 +12,6 @@
     - 0.36 USD/hour
       - 消し忘れたら月 30000 円くらい飛ぶ感じで
     - 慣れてるって理由だけで Ubuntu だけど。どのディストリビューションに何が入ってるか全く知らない
+  - スポットだから別のゾーンじゃないと借りられないかなとかも検討してたけど、すんなり instance allocation された
+- Compute Engine のセットアップスクリプトは[scripts/setup\_instance.sh](scripts/setup_instance.sh)にまとめていく
 
