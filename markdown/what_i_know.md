@@ -28,7 +28,11 @@
   - NIDIA/Megatron-LM という transformer ベースのモデルの学習を大規模高速化するための手法を使っている。 GPT-NeoX というのがその環境とかツールキットの名前
     - GPU を増やして、線形に FLOPS を増やすことが目的。完全に大規模むけ
     - StableLM は GPT-NeoX で学習され huggingface 用に変換されて公開されている
-
+- ファイル群
+  - fp16 用とそれ以外の weight がある
+  - index.json でクラスの重みとして読む
+  - クラスは transformer の PreTrainedModel を継承した JapaneseStableLMAlphaForCausalLM。 AutoModelForCausalMl は config.json を見てこれを使う
+  - かなりシンプル
 
 # わかってないこと/決まってないこと
 
