@@ -1,6 +1,19 @@
 # わかったこと
 
+- 基本
+  - [このモデルを使う](https://huggingface.co/stabilityai/japanese-stablelm-instruct-alpha-7b)
+- とりあえず分かる範囲で必要なライブラリとか
+  - torch
+  - transformers
+  - einops
+  - sentencepiece
+  - cuda
 - 新しいものなので ChatGPT はこの作業の役には立たない
+- ML の基礎知識的なこと
+  - AutoModelForCausalLM ってどんなモデル
+    - 文章の続きを書いたり、会話に回答したりする出力ヘッドを持つモデル。 CLM とか略すらしい
+  - NIDIA/Megatron-LM という transformer ベースのモデルの学習を大規模高速化するための手法を使っている。 GPT-NeoX というのがその環境とかツールキットの名前
+    - StableLM はそれで学習され huggingface 用に変換されて公開されている
 
 # わかってないこと
 
@@ -22,4 +35,8 @@
   - lora は？
 - モデルシェアサイトはすでにある？
 - chichipui 的な小説サイトは可能性あるの？人格を公開して遊ぶ感じ？ディストピア？
+- decoder-only model って何？
+  - encoder は他のモデルの使ってますってことですかね
+- [requirements.txt](https://huggingface.co/stabilityai/japanese-stablelm-instruct-alpha-7b/blob/main/requirements.txt) には `sentencepiece` `einops` しか書いてないけど、 transformers とかはいらないのか？
+  - 自分は huggingface リポジトリのことわかってないかもしれない
 
