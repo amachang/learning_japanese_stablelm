@@ -7,4 +7,5 @@
   - StableLM Instruct の方の Huggingface のページでも読む
 - 軽くサンプルコードや requirements をみて、派生的な知識を得る
 - huggingface のファイル群をざっと見る
+- 最終的には GKE で使うときだけ Web UI を立ち上げるみたいにしたいけど、一旦普通の Compute Engine インスタンスを立てる
 
