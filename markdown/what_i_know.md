@@ -1,4 +1,4 @@
-# わかったこと
+# わかったこと/決めたこと
 
 - 基本
   - [このモデルを使う](https://huggingface.co/stabilityai/japanese-stablelm-instruct-alpha-7b)
@@ -8,14 +8,29 @@
   - einops
   - sentencepiece
   - cuda
+- バージョンとか。一旦以下のような環境を作ってみる
+  - cuda 11.8 or 11.7
+    - GCP のインスタンスのドライバとか見て決める
+  - python 3.10
+  - torch 2.0.1
+    - python 3.8 ~
+    - cuda 11.7 or 11.8
+  - transformers 4.31.0
+    - torch 1.9 ~ ただし 1.12.0 はダメ
+    - python 3.8 or 3.9 or 3.10
+  - einops 0.6.1
+    - python 3.7 ~
+  - sentenncepiece 0.1.99
 - 新しいものなので ChatGPT はこの作業の役には立たない
 - ML の基礎知識的なこと
   - AutoModelForCausalLM ってどんなモデル
     - 文章の続きを書いたり、会話に回答したりする出力ヘッドを持つモデル。 CLM とか略すらしい
   - NIDIA/Megatron-LM という transformer ベースのモデルの学習を大規模高速化するための手法を使っている。 GPT-NeoX というのがその環境とかツールキットの名前
-    - StableLM はそれで学習され huggingface 用に変換されて公開されている
+    - GPU を増やして、線形に FLOPS を増やすことが目的。完全に大規模むけ
+    - StableLM は GPT-NeoX で学習され huggingface 用に変換されて公開されている
 
-# わかってないこと
+
+# わかってないこと/決まってないこと
 
 - 関連ライブラリの version とかはどんな感じ？
 - GCP でどのくらいのインスタンスが必要？
