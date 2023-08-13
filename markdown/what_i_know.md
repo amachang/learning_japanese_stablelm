@@ -1,7 +1,7 @@
 # わかったこと/決めたこと
 
 - 基本
-  - [このモデルを使う](https://huggingface.co/stabilityai/japanese-stablelm-instruct-alpha-7b)
+  - [このモデルを使う](https://huggingface.co/stabilityai/japanese-stablelm-base-alpha-7b)
 - とりあえず分かる範囲で必要なライブラリとか
   - torch
   - transformers
@@ -21,7 +21,6 @@
   - einops 0.6.1
     - python 3.7 ~
   - sentenncepiece 0.1.99
-- 新しいものなので ChatGPT はこの作業の役には立たない
 - ML の基礎知識的なこと
   - AutoModelForCausalLM ってどんなモデル
     - 文章の続きを書いたり、会話に回答したりする出力ヘッドを持つモデル。 CLM とか略すらしい
@@ -33,6 +32,7 @@
   - index.json でクラスの重みとして読む
   - クラスは transformer の PreTrainedModel を継承した JapaneseStableLMAlphaForCausalLM。 AutoModelForCausalMl は config.json を見てこれを使う
   - かなりシンプル
+- 実行環境としては 100 GB のストレージがあればいい。モデルをダウンロードする分で数十GB って感じ
 
 # わかってないこと/決まってないこと
 
