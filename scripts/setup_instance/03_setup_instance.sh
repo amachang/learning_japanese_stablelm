@@ -61,6 +61,6 @@ sudo apt install python3.10 python3.10-venv -y
 # このリポジトリをインポート
 git config --global user.email seijro@gmail.com
 git config --global user.name amachang
-git clone https://github.com/amachang/learning_japanese_stablelm dev
+git clone git@github.com:amachang/learning_japanese_stablelm.git
 
 
