@@ -44,6 +44,7 @@
   - アイドルとか
   - 小説の中の人物とか
 - いい感じの Web UI とかってすでに開発されてる？最悪 X 経由でアクセス可能な GUI でも良い。
+  - [text-generation-webui](https://github.com/oobabooga/text-generation-webui) が最大手っぽいけど、どうなんだろう？
 - ネット小説とか学習させたら、その中のキャラになってくれるの？
 - 追加学習の手法は？
   - few shot, one shot は?
