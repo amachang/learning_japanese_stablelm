@@ -2,6 +2,10 @@
 
 set -eu
 
+cd ~
+
+git clone git@github.com:amachang/learning_japanese_stablelm.git dev
+
 cd ~/dev
 
 python3.10 -m venv venv
