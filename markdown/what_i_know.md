@@ -38,6 +38,8 @@
 
 # わかってないこと/決まってないこと
 
+- ライブラリの実装の詳細
+  - `LlamaTokenizer` の `additional_special_tokens` って何？
 - 架空や実在の人物の mimic と会話することってできるんですか？
   - 故人とか
   - 歴史上の人物とか
@@ -55,8 +57,6 @@
 - chichipui 的な小説サイトは可能性あるの？人格を公開して遊ぶ感じ？ディストピア？
 - decoder-only model って何？
   - encoder は他のモデルの使ってますってことですかね
-- [requirements.txt](https://huggingface.co/stabilityai/japanese-stablelm-instruct-alpha-7b/blob/main/requirements.txt) には `sentencepiece` `einops` しか書いてないけど、 transformers とかはいらないのか？
-  - 自分は huggingface リポジトリのことわかってないかもしれない
 - 先行する英語圏の CausalLM に関する知見を収集したい。
 - 1024 ってどのくらいの情報量なの？
 - モデルが私をどう知るのが良いのか
@@ -79,4 +79,4 @@
     - 追加すべき情報（AI が生成する部分。パース可能でなければならない）
   - 複数の情報を AI から得るには解答のフォーマットもこちら側から伝えなければならない
     - パースエラーになったら、パース成功するまで繰り返せばいいし、一人専用の AI だとするとバッチの数を増やしていいものを使えばいい。多数決的な枠組みも使えるかもしれない。
-
+- 
