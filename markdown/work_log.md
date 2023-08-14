@@ -13,15 +13,15 @@
       - 消し忘れたら月 30000 円くらい飛ぶ感じで
     - 慣れてるって理由だけで Ubuntu だけど。どのディストリビューションに何が入ってるか全く知らない
   - スポットだから別のゾーンじゃないと借りられないかなとかも検討してたけど、すんなり instance allocation された
-- Compute Engine の instance のセットアップスクリプトは[scripts/setup\_instance](scripts/setup_instance)にまとめていく
+- Compute Engine の instance のセットアップスクリプトは[scripts/setup\_instance](../scripts/setup_instance)にまとめていく
   - nvidia driver 535
   - cuda 11.8
   - python 3.10
-- 環境セットアップは [scripts/set\_env.sh](scripts/set_env.sh)
+- 環境セットアップは [scripts/set\_env.sh](../scripts/set_env.sh)
 - instruct の方で遊んでみるが、データセットを見て、質問を答えることがメインな感じがした。 base の方でちょっと遊んでみるかという感じ
-  - [stablelm\_sandbox/try\_base\_model.py](stablelm_sandbox/try_base_model.py)
-  - [stablelm\_sandbox/try\_instruct\_model.py](stablelm_sandbox/try_instruct_model.py)
-- [dialog.py](stablelm_sandbox/dialog.py) というのを作ってちょっと遊んでみた。コンテキストの抽出とか、コンテキストの渡し方とかいろんな工夫が必要そう。
+  - [stablelm\_sandbox/try\_base\_model.py](../stablelm_sandbox/try_base_model.py)
+  - [stablelm\_sandbox/try\_instruct\_model.py](../stablelm_sandbox/try_instruct_model.py)
+- [dialog.py](../stablelm_sandbox/dialog.py) というのを作ってちょっと遊んでみた。コンテキストの抽出とか、コンテキストの渡し方とかいろんな工夫が必要そう。
 - まず、 1024 トークンにどのくらいの情報を載せられるのかを知る必要があるので、いくつかの長さの違う文章を入れてみて。どの程度のものなのか感覚値を掴む。
   - 長すぎる場合、適当にトークンを等間隔で分割して、それぞれ文字数指定で要約させて。短文を組み合わせて、大意を推移させるなどの手法を試してみる
 
