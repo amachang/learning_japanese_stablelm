@@ -17,7 +17,7 @@
   - nvidia driver 535
   - cuda 11.8
   - python 3.10
-- 環境セットアップは [scripts/set\_env.sh](../scripts/set_env.sh)
+- 環境セットアップは [scripts/setup\_env.sh](../scripts/setup_env.sh)
 - instruct の方で遊んでみるが、データセットを見て、質問を答えることがメインな感じがした。 base の方でちょっと遊んでみるかという感じ
   - [stablelm\_sandbox/try\_base\_model.py](../stablelm_sandbox/try_base_model.py)
   - [stablelm\_sandbox/try\_instruct\_model.py](../stablelm_sandbox/try_instruct_model.py)
