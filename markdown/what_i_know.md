@@ -21,8 +21,12 @@
   - einops 0.6.1
     - python 3.7 ~
   - sentenncepiece 0.1.99
-- モデルの詳細
-  - 最長 2048 トークン（与える文字列 + 追加される文字列）
+- モデルやトークナイザーの詳細
+  - モデル
+    - 最長 2048 トークン（与える文字列 + 追加される文字列）
+  - トークナイザー
+    - トークナイザーに指定される。 `additional_special_tokens=['▁▁']` は多分、 sentencepiece で使われる前のトークンとの繋がりを示すための U+2581 と関連していると思われる。多分、つけといた方がいいんだろう。[参考](https://github.com/google/sentencepiece/issues/15)
+    - トークナイザーに指定される `add_special_tokens=False` は end of string みたいな記号を入れられると、続きを書く LLM の役割としては不適切だからだと思う。
 - ML の基礎知識的なこと
   - AutoModelForCausalLM ってどんなモデル
     - 文章の続きを書いたり、会話に回答したりする出力ヘッドを持つモデル。 CLM とか略すらしい
