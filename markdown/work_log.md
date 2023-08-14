@@ -22,7 +22,7 @@
   - [stablelm\_sandbox/try\_base\_model.py](../stablelm_sandbox/try_base_model.py)
   - [stablelm\_sandbox/try\_instruct\_model.py](../stablelm_sandbox/try_instruct_model.py)
 - [dialog.py](../stablelm_sandbox/dialog.py) というのを作ってちょっと遊んでみた。コンテキストの抽出とか、コンテキストの渡し方とかいろんな工夫が必要そう。
-- まず、 1024 トークンにどのくらいの情報を載せられるのかを知る必要があるので、いくつかの長さの違う文章を入れてみて。どの程度のものなのか感覚値を掴む。
+- まず、 2048 トークンにどのくらいの情報を載せられるのかを知る必要があるので、いくつかの長さの違う文章を入れてみて。どの程度のものなのか感覚値を掴む。
   - 長すぎる場合、適当にトークンを等間隔で分割して、それぞれ文字数指定で要約させて。短文を組み合わせて、大意を推移させるなどの手法を試してみる
   - [research\_token\_length.py](../stablelm_sandbox/research_token_length.py) でトークンごとの情報量を調べる。
 
