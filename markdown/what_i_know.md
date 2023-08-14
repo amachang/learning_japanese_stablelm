@@ -83,4 +83,11 @@
     - 追加すべき情報（AI が生成する部分。パース可能でなければならない）
   - 複数の情報を AI から得るには解答のフォーマットもこちら側から伝えなければならない
     - パースエラーになったら、パース成功するまで繰り返せばいいし、一人専用の AI だとするとバッチの数を増やしていいものを使えばいい。多数決的な枠組みも使えるかもしれない。
-- 
+- トレーニングどうやる？
+  - この辺の通りやればできそうな気はする
+    - [Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling)
+  - 先駆者様
+    - [japanese-stablelm-base-alpha-7bのLoRAを試す](https://zenn.dev/saldra/articles/87d3b289583a68)
+    - [p1atdev@github](https://github.com/p1atdev/stablelm_lora/blob/62657e1a6c1dc6b6f1b764bcf06e3af43eedd05d/example_train.py)
+- peft って何？
+  - LoRA やってる人が reference してたので一応
