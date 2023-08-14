@@ -91,3 +91,4 @@
     - [p1atdev@github](https://github.com/p1atdev/stablelm_lora/blob/62657e1a6c1dc6b6f1b764bcf06e3af43eedd05d/example_train.py)
 - peft って何？
   - LoRA やってる人が reference してたので一応
+
