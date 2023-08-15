@@ -11,7 +11,7 @@ launch_instance() {
         --machine-type=a2-highgpu-1g \
         --accelerator=count=1,type=nvidia-tesla-a100 \
         --provisioning-model=SPOT \
-        --create-disk=auto-delete=yes,boot=yes,device-name=stablelm,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20230812,mode=rw,size=100,type=pd-ssd
+        --create-disk=auto-delete=yes,boot=yes,device-name=stablelm,image=projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20230727,mode=rw,size=100,type=pd-ssd
 }
 
 launch_instance_in_available_zone() {

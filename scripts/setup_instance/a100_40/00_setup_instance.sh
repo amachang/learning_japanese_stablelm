@@ -2,6 +2,11 @@
 
 set -eu
 
+if ! lsb_release -r | grep -q "22.04"; then
+    echo "Error: This script requires Ubuntu 22.04. Please use Ubuntu 22.04 and try again."
+    exit 1
+fi
+
 # 諸々のアップグレード
 sudo apt update
 sudo apt upgrade -y
