@@ -5,6 +5,7 @@ sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.do
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/3bf863cc.pub;
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/ /";
 sudo apt update
+sudo apt upgrade -y
 
 # cuda のインストール
 sudo apt install cuda-11-8 -y
