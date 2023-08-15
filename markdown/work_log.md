@@ -69,6 +69,9 @@
   - とりあえずインスタンス削除
   - [セットアップの最初](../scripts/setup_instance/a100_40/00_setup_instance.sh) に Ubuntu のバージョンをチェックするようにした。こうやってコード量が増えていくのがいやだけどしょうがない。
   - またインスタンスの起動からや...
+- A100 インスタンスで今までのコードを試す
+  - from\_pretrained の variant='fp16' すれば pytorch\_model.bin.index.fp16.json を使ってくれることがわかった。 variant ね。他のモデルでも使えそうな知識
+
 
 
 
