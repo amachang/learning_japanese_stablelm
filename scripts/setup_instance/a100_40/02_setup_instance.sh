@@ -1,10 +1,17 @@
 #!/bin/bash
 
+set -eux
+
 # repo の設定
 sudo wget -O /etc/apt/preferences.d/cuda-repository-pin-600 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin;
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/3bf863cc.pub;
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/ /";
 sudo apt update
+
+# ここで依存関係を組み立て直す。 cuda の repo が増えて依存関係の再構築をしなければならないところがあるので　
+sudo apt --fix-broken install -y
+
+# 念の為
 sudo apt upgrade -y
 
 # cuda のインストール
