@@ -58,4 +58,7 @@
       - というわけで使える zone を探すスクリプトを書く
   - [使いたいインスタンスを起動できる zone を探すスクリプト](../scripts/launch_a100_spot_instance_in_available_zone.sh) を書いた
     - まあまあいいんじゃないか。またいつかちょっと変えて使いそう。
+  - 無事、上のスクリプトで asia-northeast で instance を使えるゾーンがあった。ラッキー
+  - A100 インスタンスようのセットアップスクリプトをここに置く [scripts/setup\_instance/a100\_40](../scripts/setup_instance/a100_40)
+
 
