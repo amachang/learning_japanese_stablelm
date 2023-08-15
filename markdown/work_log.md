@@ -53,4 +53,9 @@
       - `sudo crontab /tmp/current_cron`
       - `sudo systemctl restart cron`
       - `sudo rm /tmp/current_cron`
+    - 実際にインスタンスを作ろうと思ったら作れなかった。多分割り当てられる spot インスタンスがないんだろうな。 gcloud コマンドを使った方がもっと細かいエラーがみられる印象があるので試してみる。
+      - ZONE\_RESOURCE\_POOL\_EXHAUSTED\_WITH\_DETAILS エラーが出てた。うーん。半導体不足よ
+      - というわけで使える zone を探すスクリプトを書く
+  - [使いたいインスタンスを起動できる zone を探すスクリプト](../scripts/launch_a100_spot_instance_in_available_zone.sh) を書いた
+    - まあまあいいんじゃないか。またいつかちょっと変えて使いそう。
 
