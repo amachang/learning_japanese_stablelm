@@ -8,7 +8,7 @@ sudo update-initramfs -u;
 
 # 確認した環境をこのスクリプトの前提条件として書いておく
 
-if ! [ "$(lspci | grep -i nvidia)" = "00:04.0 3D controller: NVIDIA Corporation Device 20b0 (rev a1)" ]; then
+if ! lspci | grep -i nvidia | grep -q 'rev a1'; then
     echo "Different GPU" > /dev/stderr;
     exit 1;
 fi
