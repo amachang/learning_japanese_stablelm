@@ -20,6 +20,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         "stabilityai/japanese-stablelm-base-alpha-7b",
         trust_remote_code=True,
+        variant='fp16',
     )
     model.half()
     model.eval()
@@ -31,7 +32,7 @@ def main():
 
         tokens = model.generate(
             input_ids.to(device=model.device),
-            max_new_tokens=2048 - 1 - input_token_length,
+            max_new_tokens=128,
             temperature=1,
             top_p=0.95,
             do_sample=True,
