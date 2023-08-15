@@ -8,7 +8,7 @@ sudo update-initramfs -u;
 
 # 確認した環境をこのスクリプトの前提条件として書いておく
 
-if ! [ "$(lspci | grep -i nvidia)" = "00:04.0 3D controller: NVIDIA Corporation TU104GL [Tesla T4] (rev a1)" ]; then
+if ! [ "$(lspci | grep -i nvidia)" = "00:04.0 3D controller: NVIDIA Corporation Device 20b0 (rev a1)" ]; then
     echo "Different GPU" > /dev/stderr;
     exit 1;
 fi
@@ -34,7 +34,7 @@ if ! ubuntu-drivers devices | grep -q nvidia-driver-535; then
     exit 1
 fi
 
-sudo apt install nvidia-driver-535
+sudo apt install nvidia-driver-535 -y
 
 sudo reboot
 

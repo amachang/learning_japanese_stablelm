@@ -34,7 +34,7 @@ if ! ubuntu-drivers devices | grep -q nvidia-driver-535; then
     exit 1
 fi
 
-sudo apt install nvidia-driver-535
+sudo apt install nvidia-driver-535 -y
 
 sudo reboot
 
