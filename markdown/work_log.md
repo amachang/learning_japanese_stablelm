@@ -38,4 +38,19 @@
   - まず T4 じゃダメなんで A100 40GB をインスタンスのセットアップからやる
   - AIのべりすとのプロンプトのテンプレートを発見したので AI のべりすとと結果の比較しながら、フォーマットに特化した train が重要か重要でないか感覚を得る
 - T4 インスタンスを削除して A100 40GB をセットアップする
+  - A100 40GB / a2-highgpu-1g / Ubuntu 22.04 / 100 GB SSD / スポットな感じで
+    - コードの書き直しが多いので weight の読み込みがボトルネックになってる SSD にした。 100 GB でも 3000 IOPS 前の環境だと 600 IOPS だった
+    - 1.65 USD/hour
+      - T4 で試してたときの 5 倍の料金
+      - 停止忘れ事故があったとき
+        - 1 day 6000 円
+        - 1 week 42000 円
+        - 1 month 168000 円
+    - 朝の 6:00 くらいに起動してたら終了するようなコード書いとくか
+      - `sudo timedatectl set-timezone Asia/Tokyo`
+      - `sudo crontab -l > /tmp/current_cron`
+      - `sudo sh -c 'echo "0 6 * * * /sbin/shutdown -h now" >> /tmp/current_cron'`
+      - `sudo crontab /tmp/current_cron`
+      - `sudo systemctl restart cron`
+      - `sudo rm /tmp/current_cron`
 
