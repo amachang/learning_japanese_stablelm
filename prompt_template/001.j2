@@ -1,0 +1,18 @@
+{{personas.ai.name | escape_name}}の自己紹介：
+{% for phrase in personas.ai.intro_phrases %}
+{{-personas.ai.name | escape_name}}:「{{phrase | escape_phrase}}」
+{% endfor %}
+＊　＊　＊
+{{user_name | escape_name}}の自己紹介：
+{% for phrase in personas.user.intro_phrases %}
+{{-personas.user.name | escape_name}}:「{{phrase | escape_phrase}}」
+{% endfor %}
+＊　＊　＊
+{{personas.ai.name | escape_name}}と{{personas.user.name | escape_name}}が会話をしています：
+{% for name_and_phrase in history %}
+{{set name = name_and_phrase.0 }}
+{{set phrase = name_and_phrase.1 }}
+{{-name | escape_name}}:「{{phrase | escape_phrase}}」
+{% endfor %}
+{{-personas.ai.name | escape_name}}:「
+
